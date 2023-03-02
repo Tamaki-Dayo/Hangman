@@ -44,24 +44,14 @@ function generateGuessButtons() {
   keyboard.innerHTML = buttonsHTML;
 }
   
-//Casing
-function toTitleCase(str) {
-  return str.replace(
-    /\w\S*/g,
-    function(txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    }
-  );
-}
-
   // Initialise Word
   function randomWord() {
     answer = words[Math.floor(Math.random() * words.length)].toLowerCase();
   }
   // Word Status
   function guessedWord() {
-    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _")).join('')
-    wordDisplay.innerHTML = toTitleCase(wordStatus);
+    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('')
+    wordDisplay.innerHTML = wordStatus.charAt(0).toUpperCase() + wordStatus.slice(1);;   
   }
 
   // Handle Guess
@@ -87,7 +77,7 @@ function toTitleCase(str) {
   }
   function checkIfGameLost(){
     if(life === 0) {
-      wordDisplay.innerHTML = 'The answer was: ' + toTitleCase(answer);
+      wordDisplay.innerHTML = 'The answer was: ' + answer;
       keyboard.innerHTML = 'You Lost!!!';
     }
   }
