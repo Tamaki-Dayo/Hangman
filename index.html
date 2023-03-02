@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-5">Do you know Meiya's Community?</h1>
+    <div class="text-center">
+      <p class="font">Guess the Word</p>
+      <p id="wordDisplay" class="font">The word to be guessed goes here</p>
+      <div id="keyboard"></div>
+      <button class="btn btn-info m-5" onClick="reset()">Reset</button>
+      <p>Remaining Lives: <span id='hpDisplay'></span></p>
+    </div>
+    <div class="text-end">
+      Join the Community!
+      <a href="https://discord.gg/meiya" target="_blank">&nbsp; <img src="./Images/discord.png" alt=""></a>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="muted">
+    Tamaki Dayo
+  </footer>
+  <a class="attribute" href="https://www.flaticon.com/free-icons/discord" title="discord icons" target="_blank">Discord icons created by Freepik - Flaticon</a>
+  <script src="./js/hangman.js"></script>
+</body>
+</html>
